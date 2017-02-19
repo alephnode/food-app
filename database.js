@@ -1,9 +1,6 @@
 var http = require('http');
 var Pool = require('pg').Pool;
-
-// by default the pool will use the same environment variables
-// as psql, pg_dump, pg_restore etc:
-// https://www.postgresql.org/docs/9.5/static/libpq-envars.html
+var random = Math.floor((Math.random() * 7));
 
 // you can optionally supply other values
 var config = {
@@ -31,7 +28,7 @@ var server = http.createServer(function(req, res) {
 pool
   .query('select * from restaurant_info')
   .then(function(result) {
-    console.log(result.rows[0])
+    console.log(result.rows[random])
   });
 
   pool.end(function (err) {
