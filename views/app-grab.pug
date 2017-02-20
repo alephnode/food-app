@@ -1,0 +1,15 @@
+html
+  head
+    title 'Just F*#$ing Pick Something'
+    style
+      include ../css/style.css
+  body
+    .content
+      .restaurant_name= 'Just grab ' + name + '.'
+      .restaurant_address= 'Address: ' + (address == 'N/A' ? 'Find it yourself' : address)
+      .restaurant_phone= 'Phone: ' + (phone == 'N/A' ? 'Ain\'t got it.' : phone)
+      .restaurant_hours= 'Hours: ' + (hours == 'N/A' ? 'Couldn\'t find the hours. #sorrynotsorry' : hours)
+      a(href='/grab-something').retry_button= 'Nah, let\'s get something else.'
+      .links
+        a(href='/').back_button= 'Just take me home.'
+        a(href='/make-something').make_button= 'Let\'s make something instead.'

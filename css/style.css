@@ -1,0 +1,81 @@
+body, html {
+  font-family: sans-serif
+}
+
+h1 {
+  color: #202020
+}
+
+body {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-align: center;
+-webkit-align-items: center;
+align-items: center;
+min-height: 24em;
+-webkit-box-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+flex-direction: column
+}
+
+.links, .content {
+  width: 100%;
+  text-align: center
+}
+
+.links {
+  margin-top: 70px
+}
+
+.grab_button, .make_button, .retry_button, .back_button {
+  margin: 0px 60px;
+  width: 200px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.grab_button, .back_button, .make_button {
+  border: 1px solid orange;
+  color: orange;
+}
+
+ .retry_button {
+  background: orange;
+  color: white;
+  display: block;
+  margin: 70px auto 110px auto;
+  padding: 20px 40px;
+  border-radius: 40px;
+  width: 240px
+}
+
+.back_button {
+  width: 200px;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  border-radius: 40px
+}
+
+.restaurant_name, .recipe_name, .title_headline {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 auto 40px auto;
+  width: 75%
+}
+
+@media screen and (max-width: 768px) {
+
+  .grab_button, .make_button {
+    display: block;
+    margin: 0 auto
+  }
+
+  .links {
+    margin-top: 30px
+  }
+
+}

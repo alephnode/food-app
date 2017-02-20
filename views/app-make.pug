@@ -1,0 +1,12 @@
+html
+  head
+    title 'Just F*#$ing Pick Something'
+    style
+      include ../css/style.css
+  body
+    .content
+      .recipe_name= 'Just make ' + name + '.'
+      a(href='/make-something').retry_button= 'Let\'s do something else.'
+      .links
+        a(href='/').back_button= 'Just take me home.'
+        a(href='/grab-something').grab_button= 'Actually let\'s order something :/'

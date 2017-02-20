@@ -1,4 +1,12 @@
 html
   head
+    title 'Just F*#$ing Pick Something'
+    style
+      include ../css/style.css
   body
-    h1= message
+    .content
+      h1.title_headline= 'Just f*#$ing pick something.'
+      h3= 'We should: '
+      .links
+        a(href='/make-something').make_button= 'Make Something'
+        a(href='/grab-something').grab_button= 'Grab Something'
