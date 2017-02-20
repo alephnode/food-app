@@ -6,9 +6,12 @@ html
   body
     .content
       .restaurant_name= 'Just grab ' + name + '.'
-      .restaurant_address= 'Address: ' + (address == 'N/A' ? 'Find it yourself' : address)
-      .restaurant_phone= 'Phone: ' + (phone == 'N/A' ? 'Ain\'t got it.' : phone)
-      .restaurant_hours= 'Hours: ' + (hours == 'N/A' ? 'Couldn\'t find the hours. #sorrynotsorry' : hours)
+      .restaurant_address_label=  'Address'
+      .restaurant_address=(address == 'N/A' ? 'Find it yourself' : address)
+      .restaurant_phone_label=  'Phone'
+      .restaurant_phone=(phone == 'N/A' ? 'Ain\'t got it.' : phone)
+      .restaurant_hours_label=  'Hours'
+      .restaurant_hours= (hours == 'N/A' ? 'Couldn\'t find the hours. #sorrynotsorry' : hours)
       a(href='/grab-something').retry_button= 'Nah, let\'s get something else.'
       .links
         a(href='/').back_button= 'Just take me home.'

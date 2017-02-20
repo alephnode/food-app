@@ -3,7 +3,11 @@ body, html {
 }
 
 h1 {
-  color: #202020
+  color: black
+}
+
+h3 {
+  font-weight: 100
 }
 
 body {
@@ -31,7 +35,7 @@ flex-direction: column
 
 .grab_button, .make_button, .retry_button, .back_button {
   margin: 0px 60px;
-  width: 200px;
+  width: 220px;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 20px;
@@ -40,10 +44,12 @@ flex-direction: column
 .grab_button, .back_button, .make_button {
   border: 1px solid orange;
   color: orange;
+  font-weight: 100;
 }
 
  .retry_button {
   background: orange;
+  font-weight: 100;
   color: white;
   display: block;
   margin: 70px auto 110px auto;
@@ -53,7 +59,6 @@ flex-direction: column
 }
 
 .back_button {
-  width: 200px;
   background: white;
   color: black;
   border: 1px solid black;
@@ -67,15 +72,35 @@ flex-direction: column
   width: 75%
 }
 
+.restaurant_address_label, .restaurant_phone_label, .restaurant_hours_label {
+  font-weight: 600
+}
+
+.restaurant_address, .restaurant_phone, .restaurant_hours {
+  font-weight: 100;
+  line-height: 1.5em;
+  margin: 5px auto 15px auto;
+  width: 18%;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 768px) {
 
   .grab_button, .make_button {
     display: block;
-    margin: 0 auto
+    margin: 40px auto
   }
 
   .links {
     margin-top: 30px
+  }
+
+  .restaurant_address, .restaurant_phone, .restaurant_hours {
+    width: 95%
+  }
+
+  .retry_button {
+    margin-bottom: 70px
   }
 
 }
